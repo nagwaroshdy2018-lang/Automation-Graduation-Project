@@ -1,0 +1,24 @@
+# Maven
+target/
+.mvn/
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Logs
+*.log
+
+# Allure
+allure-results/
+allure-report/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive data (optional - keep config out of git if it has secrets)
+# src/test/resources/config.properties
