@@ -1,4 +1,4 @@
-# 🤖 Automation Exercise — Selenium Test Automation Framework
+#  Automation Exercise — Selenium Test Automation Framework
 
 A professional end-to-end UI test automation framework for [Automation Exercise](https://automationexercise.com) — built with **Java + Selenium WebDriver + TestNG + Maven + Allure** following the **Page Object Model (POM)** design pattern.
 
