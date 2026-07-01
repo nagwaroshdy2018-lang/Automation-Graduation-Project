@@ -102,43 +102,9 @@ AutomationPro/
 ---
 🧪 Test Coverage — 31 Tests
 🔄 End-to-End Tests (4)
-ID	Feature	Description
-TC_E2E_01	Account Lifecycle	Register → Login → Verify → Delete
-TC_E2E_02	Checkout Flow	Login → Add to cart → Checkout → Place order
-TC_E2E_03	Search & Cart	Login → Search → View → Add to cart → Logout
-TC_E2E_04	Engagement	Register → Subscribe → Submit Contact form
-✅ Valid Tests (11)
-ID	Feature	Description	Status
-TC_V_01	Login	Successful login with valid credentials	✅
-TC_V_02	Signup	Register new user with valid data	✅
-TC_V_03	Products	Products page loads correctly	✅
-TC_V_04	Search	Search returns matching products	✅
-TC_V_05	Cart	Add product to cart successfully	✅
-TC_V_06	Contact Us	Submit form with valid data	✅
-TC_V_07	Products	Filter by Women's Dress category	❌ Defect
-TC_V_08	Products	Filter by brand (Polo)	✅
-TC_V_09	Cart	Add product with quantity 5	✅
-TC_V_10	Cart	Remove a product from the cart	✅
-TC_V_11	Home Page	Home page loads with slider + sidebar	✅
+ slider + sidebar	✅
 ❌ Invalid Tests (16)
-ID	Feature	Description	Status
-TC_I_01	Login	Wrong email AND wrong password	✅
-TC_I_02	Signup	Duplicate email rejected	✅
-TC_I_03	Search	Non-existent term returns no results	✅
-TC_I_04	Contact Us	Empty required fields	❌ Defect
-TC_I_05	Subscription	Invalid email format rejected	✅
-TC_I_06	Cart	Empty cart cannot proceed to checkout	✅
-TC_I_07	Login	Empty email field (HTML5 required)	✅
-TC_I_08	Login	Empty password field (HTML5 required)	✅
-TC_I_09	Login	Valid email format, not registered	✅
-TC_I_10	Login	Registered email, wrong password	✅
-TC_I_11	Signup	Invalid email format (no @)	✅
-TC_I_12	Signup	Empty name field	✅
-TC_I_13	Contact Us	Invalid email format	✅
-TC_I_14	Subscription	Empty email (HTML5 required)	✅
-TC_I_15	Checkout	Guest cannot proceed to checkout	✅
-TC_I_16	Search	Special characters (!@#$%^&*)	❌ Defect
----
+
 🐛 Defects Found
 During automation, this framework detected 3 real defects on the live production site:
 🐛 Defect #1 — Contact Us Missing HTML5 Validation
@@ -148,14 +114,16 @@ Severity: Medium
 Description: The Contact Us form does not enforce HTML5 `required` attribute on Name, Email, Subject, or Message fields. Empty submissions reach the server.
 Impact: Poor UX, wasted server resources, below industry standards.
 Recommendation: Add `required` attribute to mandatory form fields.
-🐛 Defect #2 — Category Filter Navigation Issue
+
+
+ Defect #2 — Category Filter Navigation Issue
 Test: `TC_V_07_filterByWomenDressCategory`
 Page: `https://automationexercise.com/category_products/1`
 Severity: Major
 Description: Filtering by Women > Dress does not consistently land on the expected page or the header does not match the expected pattern. Navigation flow inconsistent.
 Impact: Users may not find products; filter feature perceived as broken.
 Recommendation: Investigate category-navigation click handler and page rendering.
-🐛 Defect #3 — Search Doesn't Sanitize Special Characters
+ Defect #3 — Search Doesn't Sanitize Special Characters
 Test: `TC_I_16_searchWithSpecialCharacters`
 Page: `https://automationexercise.com/products`
 Severity: Minor
