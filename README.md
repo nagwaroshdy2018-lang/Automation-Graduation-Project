@@ -139,30 +139,30 @@ TC_I_14	Subscription	Empty email (HTML5 required)	✅
 TC_I_15	Checkout	Guest cannot proceed to checkout	✅
 TC_I_16	Search	Special characters (!@#$%^&*)	❌ Defect
 ---
-🐛 Defects Found
+ Defects Found
 During automation, this framework detected 3 real defects on the live production site:
-🐛 Defect #1 — Contact Us Missing HTML5 Validation
+ Defect #1 — Contact Us Missing HTML5 Validation
 Test: `TC_I_04_contactUsEmptyFields`
 Page: `https://automationexercise.com/contact_us`
 Severity: Medium
 Description: The Contact Us form does not enforce HTML5 `required` attribute on Name, Email, Subject, or Message fields. Empty submissions reach the server.
 Impact: Poor UX, wasted server resources, below industry standards.
 Recommendation: Add `required` attribute to mandatory form fields.
-🐛 Defect #2 — Category Filter Navigation Issue
+ Defect #2 — Category Filter Navigation Issue
 Test: `TC_V_07_filterByWomenDressCategory`
 Page: `https://automationexercise.com/category_products/1`
 Severity: Major
 Description: Filtering by Women > Dress does not consistently land on the expected page or the header does not match the expected pattern. Navigation flow inconsistent.
 Impact: Users may not find products; filter feature perceived as broken.
 Recommendation: Investigate category-navigation click handler and page rendering.
-🐛 Defect #3 — Search Doesn't Sanitize Special Characters
+ Defect #3 — Search Doesn't Sanitize Special Characters
 Test: `TC_I_16_searchWithSpecialCharacters`
 Page: `https://automationexercise.com/products`
 Severity: Minor
 Description: Searching with only special characters (`!@#$%^&*()`) does not consistently return the expected "Searched Products" header with zero results.
 Impact: Potential edge cases in search input handling.
 Recommendation: Add server-side sanitization + graceful empty-result handling.
-> 💡 *These findings demonstrate the framework's effectiveness at catching real-world bugs — the primary goal of test automation.*
+>  *These findings demonstrate the framework's effectiveness at catching real-world bugs — the primary goal of test automation.*
 ---
 ⚙️ Setup & Installation
 Prerequisites
@@ -170,7 +170,7 @@ Java JDK 17+ — Download
 Maven 3.8+ — Download
 IntelliJ IDEA (Community Edition works)
 Google Chrome (latest stable version)
-> 💡 **WebDriverManager** automatically downloads the matching ChromeDriver — no manual setup required.
+>  **WebDriverManager** automatically downloads the matching ChromeDriver — no manual setup required.
 Installation Steps
 Clone the repository
 ```bash
@@ -184,7 +184,7 @@ Install dependencies
    ```
 Configure test data (optional): edit `src/test/resources/config.properties`
 ---
-🚀 Running Tests
+ Running Tests
 Run All Tests
 ```bash
 mvn clean test
@@ -200,19 +200,19 @@ browser=chrome      # chrome | firefox | edge
 headless=false      # true for CI/CD
 ```
 ---
-📊 Reporting
+  Reporting
 Generate Allure Report
 ```bash
 mvn allure:serve
 ```
 Report features:
-📊 Test execution dashboard
-📈 Pass/fail trends
-🏷️ Tags, severities, stories
-📸 Automatic screenshots on failure
-🔍 Step-by-step test breakdown
+ Test execution dashboard
+ Pass/fail trends
+🏷 Tags, severities, stories
+ Automatic screenshots on failure
+ Step-by-step test breakdown
 ---
-🎨 Design Patterns & Best Practices
+ Design Patterns & Best Practices
 Page Object Model (POM) — Every page has its own class; locators isolated from test logic
 Fluent API / Method Chaining — `home.goToLogin().login(email, password)`
 Explicit Waits Only — No `Thread.sleep()` anywhere
@@ -224,7 +224,7 @@ Config-Driven — URLs, credentials, browser choice in `config.properties`
 WebDriverManager — Auto-downloads matching browser drivers
 Ad-blocker Chrome prefs — Blocks images/notifications for faster CI runs
 ---
-🛣️ Roadmap
+🛣 Roadmap
 [x] Expand from 16 to 31 test cases
 [x] Add HTML5 validation coverage
 [x] Add category and brand filter tests
