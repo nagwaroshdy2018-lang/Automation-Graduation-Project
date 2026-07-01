@@ -239,10 +239,9 @@ Ad-blocker Chrome prefs — Blocks images/notifications for faster CI runs
 Nagwa Roshdy
 QA Automation Engineer
 📧 nagwaroshdy2018@gmail.com
-🐙 GitHub
+ GitHub
 ---
-📜 License
+ License
 This project is for educational and portfolio purposes.
 Built with ❤️ for QA learning and interview demonstration.
 ---
-⭐ If you found this project helpful, give it a star!
